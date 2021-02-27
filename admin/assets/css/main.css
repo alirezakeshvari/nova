@@ -1,0 +1,18 @@
+* {
+    background-color: #303030;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;    
+}
+
+/* Hedaer  */
+
+.header {
+    display: inline;
+}
