@@ -19,6 +19,7 @@ include_once 'include/init.php';
             <li><a href="#"></a>خانه</li>
             <li><a href="#"></a>کاربران</li>
             <li><a href="#"></a>محصولات</li>
+            <li><a href="exit.php">خروج</a></li>
         </ul>
     </div>
 </div>

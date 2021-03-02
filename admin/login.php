@@ -1,6 +1,13 @@
 <?php
 include_once "include/init.php";
 
+if (isset($_POST['btnlogin'])) {
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    login($phone , $password);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +20,26 @@ include_once "include/init.php";
 </head>
 <body>
     <div>
-        
+        <?php 
+            if (isset($_GET['login'])){
+                echo "<p>ابتدا وارد شوید</p>";
+            } 
+        ?>
     </div>
+    <div>
+        <form action="" method="POST">
+            <input type="text" name="phone" placeholder="تلفن همراه">
+            <input type="password" name="password" placeholder="رمز عبور">
+            <button name="btnlogin">ورود</button>
+        </form>
+    </div>
+    <?php
+    $users = showAll();
+    foreach ($users as $user) 
+    {
+        echo $user['name'];
+        echo '<hr>';
+    }
+    ?>
 </body>
 </html>
