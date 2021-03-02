@@ -7,7 +7,10 @@ if (isset($_POST['btnlogin'])) {
     login($phone , $password);
 }
 
-
+if (isset($_GET['login'])){
+    $msg = 'ابتدا وارد شوید';
+    phpAlert($msg);
+} 
 ?>
 
 <!DOCTYPE html>
