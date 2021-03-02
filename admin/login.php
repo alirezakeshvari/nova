@@ -20,18 +20,22 @@ if (isset($_POST['btnlogin'])) {
     <title>ورود به پنل مدیریت</title>
 </head>
 <body>
-    <div>
-        <?php 
-            if (isset($_GET['login'])){
-                echo "<p>ابتدا وارد شوید</p>";
-            } 
-        ?>
-    </div>
-    <div>
+    <div class="wrapper">
+        <div class="title">
+            Login Form
+        </div>
         <form action="" method="POST">
-            <input type="text" name="phone" placeholder="تلفن همراه">
-            <input type="password" name="password" placeholder="رمز عبور">
-            <button name="btnlogin">ورود</button>
+            <div class="field">
+                <input name="phone" type="text" required>
+                <label>Phone Number</label>
+            </div>
+            <div class="field">
+                <input name="password" type="password" required>
+                <label>Password</label>
+                </div>
+            <div class="field">
+                <input name="btnlogin" type="submit" value="Login">
+            </div>
         </form>
     </div>
 </body>
