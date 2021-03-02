@@ -1,5 +1,12 @@
 <?php
 include_once 'include/init.php';
+if (isset($_SESSION['admin'])){
+
+} else {
+    header('location:login.php?login=failed');
+}
+
+$admin = selectAdmin($_SESSION['admin']);
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +23,9 @@ include_once 'include/init.php';
 <div class="container">
     <div class="header">
         <ul>
-            <li><a href="#"></a>خانه</li>
-            <li><a href="#"></a>کاربران</li>
-            <li><a href="#"></a>محصولات</li>
+            <li><a href="#">خانه</a></li>
+            <li><a href="#">کاربران</a></li>
+            <li><a href="products.php">محصولات</a></li>
             <li><a href="exit.php">خروج</a></li>
         </ul>
     </div>

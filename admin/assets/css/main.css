@@ -1,5 +1,5 @@
 * {
-    background-color: #303030;
+    background-color: whitesmoke;
     direction: rtl;
 }
 
@@ -11,8 +11,18 @@ li {
     list-style-type: none;    
 }
 
-/* Hedaer  */
+.table {
+    padding: 5px;
+    text-align: center;
+}
 
-.header {
-    display: inline;
+.table table tr{
+    padding: 10px;
+    border: solid 5px black;
+    text-align: center;
+}
+
+.table table td, .table table th{
+    border: solid 3px black;
+    padding: 3px;
 }

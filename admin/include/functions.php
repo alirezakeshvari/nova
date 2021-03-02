@@ -1,6 +1,6 @@
 <?php 
 
-// Login
+// Admin Account
 
 function login($phone, $password)
 {
@@ -41,7 +41,26 @@ function selectAdmin($phone)
     }
 }
 
-function showAll()
+// Products
+
+function showAllProducts()
+{
+    global $connect;
+    $sql = 'select * from product_table';
+    $result = $connect->prepare($sql);
+    $result->execute();
+
+    if ($result->rowCount())
+    {
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        return false;
+    }
+}
+
+// Users
+
+function showAllUsers()
 {
     global $connect;
     $sql = 'select * from user_table';
