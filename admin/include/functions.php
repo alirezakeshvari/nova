@@ -22,12 +22,10 @@ function login($phone, $password)
     if ($result->rowCount())
     {   
         $_SESSION['admin'] = $phone;
-        session_unset($_SESSION['notAdmin']);
         header('location:index.php');
         return $result;
     } else {
-        $_SESSION['notAdmin'] = 'شماره یا رمز وارد شده اشتباه میباشد.';
-        header('location:users.php');
+        header('location:login.php?auth=error');
         return false;
     }
 }
